@@ -6,6 +6,7 @@ Item {
     Rectangle{
         anchors.fill: parent
         color:theme.widgetBackgroundColor
-        radius: 5
+
+
     }
 }

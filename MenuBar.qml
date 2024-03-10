@@ -5,11 +5,10 @@ Item {
     height: parent.height
     Rectangle{
         anchors.fill: parent
-        opacity: 0
-//        color:theme.widgetBackgroundColor
+        color: theme.backgroundColor
         Column{
             anchors.fill: parent
-             anchors.topMargin: 20
+             anchors.topMargin: 50
             Image {
                 id: btnHome
                 source: "qrc:/icon/Home.png"

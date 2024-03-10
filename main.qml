@@ -14,8 +14,6 @@ Window {
      color: theme.backgroundColor
     HomePage{
         id:homeId
-
-
     }
 
     //   Rectangle{

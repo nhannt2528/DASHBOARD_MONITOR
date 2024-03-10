@@ -1,7 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>ColorSetting.qml</file>
         <file>HomePage.qml</file>
         <file>MenuBar.qml</file>
         <file>icon/button_off.png</file>
@@ -16,8 +15,12 @@
         <file>icon/Proximity Sensor.png</file>
         <file>icon/Settings.png</file>
         <file>icon/Temperature.png</file>
-        <file>TopBar.qml</file>
+        <file>HeaderBar.qml</file>
+        <file>Content.qml</file>
     </qresource>
     <qresource prefix="/Page"/>
-    <qresource prefix="/widgets"/>
+    <qresource prefix="/widgets">
+        <file>DashboardWidget.qml</file>
+        <file>SensorWidget.qml</file>
+    </qresource>
 </RCC>
