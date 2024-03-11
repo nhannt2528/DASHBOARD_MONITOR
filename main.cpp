@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
 
     QQmlApplicationEngine engine;
-     QQmlContext *context = engine.rootContext();
+    QQmlContext *context = engine.rootContext();
 
 
 
@@ -30,6 +30,9 @@ int main(int argc, char *argv[])
     Theme theme;
     theme.setBackgroundColor(QColor("#000000"));
     theme.setWidgetBackgroundColor(QColor("#1E1E1E"));
+    theme.setBtnColor(QColor("#F52B2C"));
+    theme.setBtnOnColor(QColor("#F52B2C"));
+    theme.setBtnOffColor(theme.widgetBackgroundColor());
     context->setContextProperty("theme",&theme);
 
 

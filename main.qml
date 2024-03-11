@@ -8,10 +8,15 @@ Window {
     id: window
     width: 1024
     height: 600
+    x:0
+    y:0
+    // x: (Screen.desktopAvailableWidth - width) / 2
+    // y: (Screen.desktopAvailableHeight - height) / 2
     visible: true
     title: qsTr("DASHBOARD")
-//     flags: Qt.FramelessWindowHint
+    flags: Qt.FramelessWindowHint
      color: theme.backgroundColor
+
     HomePage{
         id:homeId
     }

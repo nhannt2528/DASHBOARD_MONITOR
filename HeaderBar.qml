@@ -4,6 +4,18 @@ import QtQuick.Controls 2.15
 Item {
     width: 883
     height: 75
+    Component.onCompleted: {
+        updateRealTime();
+    }
+    Timer{
+        interval: 1000
+        running: true
+        repeat: true
+        onTriggered: {
+            updateRealTime();
+        }
+    }
+
     Rectangle{
 
         color: theme.backgroundColor
@@ -21,7 +33,7 @@ Item {
         }
         Label{
             id:rtcTimeId
-            text: "11:20"
+            text: "00:00"
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
             font.pixelSize: 50
@@ -29,5 +41,21 @@ Item {
             font.bold: true
 
         }
+        Image {
+            id: logoId
+            source: "qrc:/icon/logo 1.png"
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.right: parent.right
+            anchors.rightMargin: -10
+        }
+
+
+        function updateRealTime(){
+            var date = new Date()
+            var hours = date.getHours().toString().padStart(2, '0')
+            var minutes = date.getMinutes().toString().padStart(2, '0')
+            rtcTimeId.text=hours+":"+minutes;
+        }
     }
+
 

@@ -31,3 +31,42 @@ void Theme::setWidgetBackgroundColor(const QColor &newWidgetBackgroundColor)
     m_widgetBackgroundColor = newWidgetBackgroundColor;
     emit widgetBackgroundColorChanged();
 }
+
+QColor Theme::btnColor() const
+{
+    return m_btnColor;
+}
+
+void Theme::setBtnColor(const QColor &newBtnColor)
+{
+    if (m_btnColor == newBtnColor)
+        return;
+    m_btnColor = newBtnColor;
+    emit btnColorChanged();
+}
+
+QColor Theme::btnOnColor() const
+{
+    return m_btnOnColor;
+}
+
+void Theme::setBtnOnColor(const QColor &newBtnOnColor)
+{
+    if (m_btnOnColor == newBtnOnColor)
+        return;
+    m_btnOnColor = newBtnOnColor;
+    emit btnOnColorChanged();
+}
+
+QColor Theme::btnOffColor() const
+{
+    return m_btnOffColor;
+}
+
+void Theme::setBtnOffColor(const QColor &newBtnOffColor)
+{
+    if (m_btnOffColor == newBtnOffColor)
+        return;
+    m_btnOffColor = newBtnOffColor;
+    emit btnOffColorChanged();
+}

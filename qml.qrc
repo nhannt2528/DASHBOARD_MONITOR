@@ -23,5 +23,18 @@
         <file>DashboardWidget.qml</file>
         <file>SensorWidget.qml</file>
         <file>SensorQualityWidget.qml</file>
+        <file>Co2ControllerWidget.qml</file>
+        <file>DevicesStatusWidget.qml</file>
+        <file>NumberWidgets.qml</file>
+        <file>ConfigParameterWidget.qml</file>
     </qresource>
+    <qresource prefix="/components">
+        <file>StatusDevice.qml</file>
+        <file>TimeInputField.qml</file>
+        <file>TimePicker.qml</file>
+    </qresource>
+    <qresource prefix="/configParameterWidgets">
+        <file>Phase1ParameterWidget.qml</file>
+    </qresource>
+    <qresource prefix="/new/prefix1"/>
 </RCC>

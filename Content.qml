@@ -9,6 +9,9 @@ Rectangle{
     opacity: 0
 }
 DashboardWidget{
+    visible: false
+}
+ConfigParameterWidget{
 
 }
 

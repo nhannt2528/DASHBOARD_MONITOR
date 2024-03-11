@@ -3,6 +3,7 @@ import QtQml 2.15
 import QtQuick.Controls 2.15
 import "qrc:/widgets"
 Item {
+
 width: parent.width
 height: parent.height
 anchors.top: parent.top
@@ -67,4 +68,35 @@ SensorQualityWidget{
     anchors.left: humiWidgetId.right
     anchors.leftMargin: 10
 }
+Co2ControllerWidget{
+    id:co2ControlId
+    anchors.horizontalCenter: sensorQualityId.horizontalCenter
+    anchors.verticalCenter: vpdWidgetId.verticalCenter
+}
+Label{
+    id:labeDevivesId
+    text: "Devices"
+    color: "white"
+    font.pixelSize: 20
+    anchors.bottom: devicesStatusId.top
+    anchors.bottomMargin: 10
+    anchors.left: devicesStatusId.left
+}
+
+NumberWidgets{
+    id:numberId
+    anchors.top: sensorQualityId.top
+    anchors.left: sensorQualityId.right
+    anchors.leftMargin: 10
+    anchors.bottom:labeDevivesId.top
+    anchors.bottomMargin: 10
+}
+
+DevicesStatusWidget{
+    id:devicesStatusId
+    anchors.left: co2ControlId.right
+    anchors.leftMargin: 10
+    anchors.bottom:vpdWidgetId.bottom
+}
+
 }
