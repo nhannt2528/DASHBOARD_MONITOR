@@ -32,13 +32,13 @@ SensorWidget{
     icon_path: "qrc:/icon/Temperature.png"
     anchors.top: labeEbviromentId.bottom
     anchors.topMargin: 10
-    sensor_value: 25.5
+    sensor_value: m_sensor.temperature.toFixed(2)
      sensor_name: "Temperature"
 }
 SensorWidget{
     id:humiWidgetId
     icon_path: "qrc:/icon/Hygrometer.png"
-    sensor_value: 90
+    sensor_value: m_sensor.humidity
     anchors.left: tempWidgetId.right
     anchors.verticalCenter: tempWidgetId.verticalCenter
     anchors.leftMargin: 10
@@ -47,7 +47,7 @@ SensorWidget{
 SensorWidget{
     id:co2WidgetId
     icon_path: "qrc:/icon/CO2.png"
-    sensor_value: 1120
+    sensor_value: m_sensor.co2
     anchors.top: tempWidgetId.bottom
     anchors.topMargin: 10
     sensor_name: "CO2"
@@ -55,7 +55,7 @@ SensorWidget{
 SensorWidget{
     id:vpdWidgetId
     icon_path: "qrc:/icon/Connect.png"
-    sensor_value: 1.14
+    sensor_value: m_sensor.vdp
     anchors.left: co2WidgetId.right
     anchors.verticalCenter: co2WidgetId.verticalCenter
     anchors.leftMargin: 10
@@ -67,6 +67,8 @@ SensorQualityWidget{
     anchors.top: humiWidgetId.top
     anchors.left: humiWidgetId.right
     anchors.leftMargin: 10
+    ec_value: m_sensor.ec
+    wwc_value: m_sensor.wwc
 }
 Co2ControllerWidget{
     id:co2ControlId

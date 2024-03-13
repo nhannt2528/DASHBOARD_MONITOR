@@ -9,10 +9,10 @@ Rectangle{
     opacity: 0
 }
 DashboardWidget{
-    visible: false
+    visible: true
 }
 ConfigParameterWidget{
-
+visible: false
 }
 
 

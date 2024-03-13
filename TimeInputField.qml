@@ -38,13 +38,13 @@ Item {
             anchors.centerIn: parent
             Tumbler{
                 id: hoursTumblerId
-                model: 12
+                model: 24
                 delegate: delegateComponent
                  font.pixelSize: 20
             }
             Tumbler{
                 id: minTumblerId
-                model: 24
+                model: 59
                 delegate: delegateComponent
                 font.pixelSize: 20
 
@@ -60,7 +60,7 @@ Item {
 
                 timePopup.close();
                 timerValueId.text=hoursTumblerId.currentIndex.toString().padStart(2,'0')+":"+minTumblerId.currentIndex.toString().padStart(2,'0');
-                console.log(timerValueId.text)
+
             }
         }
         function splitTime(timeString) {

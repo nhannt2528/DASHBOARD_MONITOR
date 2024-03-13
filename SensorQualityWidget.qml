@@ -4,8 +4,8 @@ import QtQml 2.15
 
 Item {
 
-    property real ec_value: 1100
-    property real wwc_value:99
+    property real ec_value: 0
+    property real wwc_value:0
     width: 220
     height: 188
 

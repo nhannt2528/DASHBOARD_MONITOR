@@ -6,6 +6,8 @@ QT += quick virtualkeyboard mqtt
 
 SOURCES += \
         main.cpp \
+        mqttservices.cpp \
+        sensor.cpp \
         theme.cpp
 
 RESOURCES += qml.qrc
@@ -24,4 +26,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 DISTFILES +=
 
 HEADERS += \
+    mqttservices.h \
+    sensor.h \
     theme.h
